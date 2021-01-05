@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "Template-driven-forms"
+  "defaultProject": "Template-driven-forms",
+  "cli": {
+    "analytics": false
+  }
 }
