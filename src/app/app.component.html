@@ -3,6 +3,26 @@
   <form #userForm="ngForm">
 
     {{userForm.value | json}}
+<!--ngModelGroup-->
+<!--<div ngModelGroup="address">
+<div class="form-group">
+  <label>city</label>
+  <input type="text" class="form-control" ngModel name="city">
+</div>
+
+<div class="form-group">
+  <label>street</label>
+  <input type="text" class="form-control" ngModel name="street">
+</div>
+
+
+<div class="form-group">
+  <label>postalcode</label>
+  <input type="text" class="form-control" ngModel name="postal code">
+</div>
+
+</div>-->
+
     <div class="form-group">
       <label>name</label>
       <input type="text" class="form-control" ngModel name="name">
@@ -27,11 +47,11 @@
     <div class="mb-3">
       <div class="form-check">
         <label class="form-check-label">morning</label>
-        <input type="radio" class="form-check-input" ngModel name="time">
+        <input type="radio" class="form-check-input" ngModel name="timePreference" value="morning">
       </div>
       <div class="form-check">
         <label class="form-check-label">evening</label>
-        <input type="radio" class="form-check-input" ngModel name="time">
+        <input type="radio" class="form-check-input" ngModel name="timePreference" value="evening">
       </div>
     </div>
     <div>
