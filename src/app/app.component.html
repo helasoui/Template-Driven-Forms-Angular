@@ -28,7 +28,8 @@
 </div>-->
     <div class="form-group">
       <label>name</label>
-      <input type="text" required class="form-control" [(ngModel)]="Model.name" name="name" #name=ngModel>
+      <input type="text" required class="form-control " [(ngModel)]="Model.name" name="name" #name=ngModel
+        [class.is-invalid]="name.invalid && name.touched">
     </div>
     <!--try it{{name.untouched}}-->
     <div class="form-group">
@@ -37,7 +38,8 @@
     </div>
     <div class="form-group">
       <label>phone</label>
-      <input type="text" class="form-control" [(ngModel)]="Model.phone" name="phone" #phone=ngModel>
+      <input type="text" class="form-control" [(ngModel)]="Model.phone" name="phone" #phone=ngModel pattern="^\d{10}$"
+        [class.is-invalid]="phone.invalid && phone.touched">
     </div>
 
     <div class="form-group">
