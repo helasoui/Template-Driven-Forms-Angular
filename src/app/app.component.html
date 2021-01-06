@@ -3,6 +3,10 @@
   <form #userForm="ngForm">
 
     {{userForm.value | json}}
+
+    <hr>
+
+    {{Model | json}}
 <!--ngModelGroup-->
 <!--<div ngModelGroup="address">
 <div class="form-group">
@@ -25,20 +29,20 @@
 
     <div class="form-group">
       <label>name</label>
-      <input type="text" class="form-control" ngModel name="name">
+      <input type="text" class="form-control" [(ngModel)]="Model.name" name="name">
     </div>
 
     <div class="form-group">
       <label>email</label>
-      <input type="text" class="form-control" ngModel name="email">
+      <input type="text" class="form-control" [(ngModel)]="Model.email" name="email">
     </div>
     <div class="form-group">
       <label>phone</label>
-      <input type="text" class="form-control" ngModel name="phone">
+      <input type="text" class="form-control" [(ngModel)]="Model.phone" name="phone">
     </div>
 
     <div class="form-group">
-      <select class="custom-select" ngModel name="course">
+      <select class="custom-select" [(ngModel)]="Model.topic" name="course">
         <option selected>select option here</option>
         <option *ngFor="let course of courses">{{course}}</option>
       </select>
@@ -47,15 +51,15 @@
     <div class="mb-3">
       <div class="form-check">
         <label class="form-check-label">morning</label>
-        <input type="radio" class="form-check-input" ngModel name="timePreference" value="morning">
+        <input type="radio" class="form-check-input" [(ngModel)]="Model.time" name="timePreference" value="morning">
       </div>
       <div class="form-check">
         <label class="form-check-label">evening</label>
-        <input type="radio" class="form-check-input" ngModel name="timePreference" value="evening">
+        <input type="radio" class="form-check-input" [(ngModel)]="Model.time" name="timePreference" value="evening">
       </div>
     </div>
     <div>
-      <input type="checkbox" class="form-check-input" ngModel name="subscribe">
+      <input type="checkbox" class="form-check-input" [(ngModel)]="Model.subscribe" name="subscribe">
       <label class="form-check-label">
         send me promotional offers
       </label>
