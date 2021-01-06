@@ -8,7 +8,14 @@ import { USer } from './models/user';
 })
 export class AppComponent {
   title = 'Template-driven-forms';
-  public courses=["angular","nodeJS","java"]
-
-  Model = new USer("hela","helasouissi@gmail.com",54350404,'','morning',true)
+  public courses = ["angular", "nodeJS", "java"]
+  topicHasError = true;
+  Model = new USer("hela", "helasouissi@gmail.com", 54350404, '', 'morning', true);
+  validateTopic(value: any) {
+    if (value === "default") {
+      this.topicHasError = true;
+    } else {
+      this.topicHasError = false;
+    }
+  }
 }
